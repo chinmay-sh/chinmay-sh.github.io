@@ -189,7 +189,7 @@ body {
 .btn-primary:hover {
     background: var(--accent-dim);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 0, 64, 0.3);
 }
 
 .btn-secondary {
@@ -703,11 +703,11 @@ section {
 }
 
 /* Smooth transitions for all interactive elements */
-* {
+.btn, .stat-card, .skill-card, .project-card, .contact-link, .tag, .skill-icon, .project-image {
     transition: transform 0.3s ease;
 }
 
-a, button, .btn {
+a, button {
     transition: all 0.3s ease;
 }
 

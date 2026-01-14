@@ -64,7 +64,12 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all animatable elements
-document.querySelectorAll('.section-title, .about-text, .stat-card, .skill-card, .project-card, .contact-link, .about-description, .hero-title, .hero-subtitle, .hero-cta, .scroll-indicator').forEach(el => {
+const animatableElements = document.querySelectorAll(
+    '.section-title, .about-text, .stat-card, .skill-card, .project-card, ' +
+    '.contact-link, .about-description, .hero-title, .hero-subtitle, .hero-cta, .scroll-indicator'
+);
+
+animatableElements.forEach(el => {
     observer.observe(el);
 });
 
