@@ -1,0 +1,12 @@
+# OS & Temp files
+.DS_Store
+Thumbs.db
+*.log
+
+# Sensitive personal documents
+*.pdf
+*.docx
+*.doc
+
+# Dev
+preview*.png

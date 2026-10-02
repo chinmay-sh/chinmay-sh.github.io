@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Chinmay Sharma — AI Engineer & Cloud Infrastructure Specialist. Building production RAG pipelines, Go agent CLIs, real-time voice AI agents on LiveKit/Vapi, and Kubernetes automation.">
+  <meta name="author" content="Chinmay Sharma">
+  <meta name="keywords"
+    content="Chinmay Sharma, AI Engineer, DevOps, Voice AI, LiveKit, Vapi, MCP, Model Context Protocol, GraphRAG, Cloudflare Workers, Kubernetes, BITS Pilani, Go, Python">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Chinmay Sharma — AI Engineer & Infrastructure Specialist">
+  <meta property="og:description"
+    content="Building production RAG pipelines, Go agent CLIs, real-time voice AI agents, and cloud automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chinmay-sh.github.io/">
+
+  <title>Chinmay Sharma — AI Engineer & Cloud Systems Architect</title>
+
+  <!-- Typography: Inter & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Design System & Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='20' y='20' width='60' height='60' rx='10' transform='rotate(45 50 50)' fill='%23ff6363'/></svg>">
+</head>
+
+<body>
+
+  <!-- Atmospheric Background Glows -->
+  <div class="bg-atmosphere" aria-hidden="true"></div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-notice" role="alert" aria-live="polite">
+    <span class="toast-dot"></span>
+    <span id="toast-message">Copied to clipboard</span>
+  </div>
+
+  <!-- Floating Glass Navigation (Raycast Style) -->
+  <header class="nav-wrapper">
+    <nav class="glass-nav" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Chinmay Sharma Home">
+        <span class="brand-diamond"></span>
+        <span>chinmay.sh</span>
+        <span class="brand-version">v2.4</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#voice-ai" class="nav-link">Voice AI</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#connect" class="nav-link">Connect</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="nav-cmd-trigger" class="cmd-trigger-btn" aria-label="Open Command Menu">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search</span>
+          <span class="kbd-badge">⌘K</span>
+        </button>
+
+        <a href="mailto:chinmaysharma1831@gmail.com?subject=Resume%20Request%20-%20Chinmay%20Sharma"
+          class="btn-primary-mist" id="nav-resume-btn">
+          <span>Request Resume</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+
+        <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-nav-drawer" aria-hidden="true">
+    <a href="#projects" class="mobile-nav-link">Featured Projects</a>
+    <a href="#voice-ai" class="mobile-nav-link">Voice AI Telephony</a>
+    <a href="#experience" class="mobile-nav-link">Production Experience</a>
+    <a href="#skills" class="mobile-nav-link">Architecture & Skills</a>
+    <a href="#education" class="mobile-nav-link">Education</a>
+    <a href="#connect" class="mobile-nav-link">Connect & Contact</a>
+    <a href="mailto:chinmaysharma1831@gmail.com?subject=Resume%20Request%20-%20Chinmay%20Sharma"
+      class="mobile-nav-link font-mono" style="color: var(--color-coral-pulse)">Request Resume (Email) ✉️</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="container hero-section">
+      <div class="hero-status-pill">
+        <span class="pulse-dot"></span>
+        <span>Available for AI Systems & Infrastructure Engineering Roles</span>
+      </div>
+
+      <h1 class="hero-headline">
+        Engineering AI Systems, <span class="coral-highlight">RAG Pipelines</span> & Voice Agents.
+      </h1>
+
+      <p class="hero-subheadline">
+        MTech at BITS Pilani (AI/ML) with 3+ years in production systems engineering. I architect serverless
+        multi-corpus RAG, self-contained Go agent CLIs, real-time SIP telephony voice agents, and Kubernetes CI/CD
+        automation.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary-mist">
+          <span>Explore Projects</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <a href="#voice-ai" class="btn-dark-tactile">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-coral-pulse)">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span>Live Voice Agent: +1 240-322-1696</span>
+        </a>
+
+        <a href="#connect" class="btn-dark-tactile">
+          <span>Get in Touch</span>
+        </a>
+      </div>
+
+      <!-- Raycast Command Palette Quick Launcher Bar -->
+      <div id="hero-cockpit-bar" class="hero-cockpit-bar" role="button" tabindex="0" aria-label="Open Command Menu">
+        <div class="cockpit-left">
+          <svg class="cockpit-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="cockpit-placeholder">Search projects, architectures, experience, or copy contacts...</span>
+        </div>
+        <div class="cockpit-shortcut-badge">
+          <span>⌘K</span>
+        </div>
+      </div>
+
+      <!-- Monospace Meta Strip -->
+      <div class="hero-meta-strip">
+        <span>chinmaysharma1831@gmail.com</span>
+        <span class="pipe">|</span>
+        <a href="https://github.com/chinmay-sh" target="_blank" rel="noopener noreferrer">github.com/chinmay-sh</a>
+        <span class="pipe">|</span>
+        <a href="https://linkedin.com/in/chinmay001" target="_blank"
+          rel="noopener noreferrer">linkedin.com/in/chinmay001</a>
+        <span class="pipe">|</span>
+        <span>BITS Pilani MTech</span>
+      </div>
+    </section>
+
+    <!-- Telemetry & Specs Strip -->
+    <section class="container" style="padding-top: 0;">
+      <div class="stats-grid">
+        <div class="stat-tile">
+          <div class="stat-number">3+<span class="stat-accent">yrs</span></div>
+          <div class="stat-label">Production Software Engineering, CI/CD & Kubernetes Systems</div>
+        </div>
+
+        <div class="stat-tile">
+          <div class="stat-number">100<span class="stat-accent">%</span></div>
+          <div class="stat-label">Serverless Two-Stage RAG Search on Cloudflare Workers & R2</div>
+        </div>
+
+        <div class="stat-tile">
+          <div class="stat-number">Go<span class="stat-accent">+</span>MCP</div>
+          <div class="stat-label">Self-Contained Single-Binary Agent CLI with Hybrid GraphRAG</div>
+        </div>
+
+        <div class="stat-tile">
+          <div class="stat-number">Live<span class="stat-accent">SIP</span></div>
+          <div class="stat-label">Voice AI Agent Deployed on US Telephony (+1 240-322-1696)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="container section">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="brand-diamond" style="width: 6px; height: 6px;"></span>
+          <span>Engineered Systems</span>
+        </div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          Autonomous agents, high-efficiency RAG pipelines, telephony infrastructure, and scalable cloud automation
+          built with strict production reliability.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" role="tablist">
+        <button class="filter-tab active" data-filter="all">All Projects</button>
+        <button class="filter-tab" data-filter="ai">AI & RAG</button>
+        <button class="filter-tab" data-filter="voice">Voice AI</button>
+        <button class="filter-tab" data-filter="infra">Infrastructure & Go</button>
+        <button class="filter-tab" data-filter="devops">DevOps & Cloud</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-container">
+
+        <!-- 1. flareRAG -->
+        <article class="project-card featured-card" data-category="ai infra">
+          <div>
+            <div class="project-header">
+              <div class="project-icon-frame">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span class="project-badge-tag">Serverless RAG</span>
+            </div>
+
+            <h3 class="project-title">flareRAG — Serverless RAG Search</h3>
+            <p class="project-role-spec">TypeScript · Cloudflare Workers · Pinecone · Voyage AI · R2</p>
+            <p class="project-desc">
+              High-performance RAG search engine turning document collections into a private Model Context Protocol
+              (MCP) server running on Cloudflare Workers at zero server cost.
+            </p>
+
+            <ul class="project-bullets">
+              <li>Engineered two-stage retrieval: Voyage AI embeddings with Pinecone vector indexing, followed by
+                deduplication and reranking for highest precision.</li>
+              <li>Multi-corpus architecture: single codebase serves multiple document collections with separate config
+                and per-corpus server instances.</li>
+              <li>Heading-aware markdown chunking, resumable incremental document ingestion, Bearer-token
+                authentication, and Cloudflare R2 full-document retrieval.</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Cloudflare Workers</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Pinecone</span>
+            <span class="tech-tag">Voyage AI</span>
+            <span class="tech-tag">Cloudflare R2</span>
+            <span class="tech-tag">MCP</span>
+          </div>
+        </article>
+
+        <!-- 2. Kash -->
+        <article class="project-card featured-card" data-category="ai infra">
+          <div>
+            <div class="project-header">
+              <div class="project-icon-frame">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <span class="project-badge-tag">Go CLI · Single Binary</span>
+            </div>
+
+            <h3 class="project-title">Kash — Self-Contained AI Agent CLI</h3>
+            <p class="project-role-spec">Go (Golang) · Docker · Hybrid GraphRAG · MCP · A2A</p>
+            <p class="project-desc">
+              Open-source Go CLI that turns raw documents (PDF, Markdown, text) into a deployable, containerized agent
+              shipped as a lightweight Docker image without external runtime dependencies.
+            </p>
+
+            <ul class="project-bullets">
+              <li>Zero external Python or standalone vector database dependency required — packs full parsing, hybrid
+                vector + knowledge graph retrieval into one Go binary.</li>
+              <li>Triple-interface delivery: exposes OpenAI-compatible REST API, Model Context Protocol (MCP) server,
+                and Agent-to-Agent (A2A) JSON-RPC.</li>
+              <li>Built with modern AI-assisted engineering tools (Claude Code, OpenCode) with high-efficiency memory
+                management in Go.</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Go (Golang)</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">GraphRAG</span>
+            <span class="tech-tag">MCP</span>
+            <span class="tech-tag">A2A Protocol</span>
+            <span class="tech-tag">OpenAI API</span>
+          </div>
+        </article>
+
+        <!-- 3. Voice AI Agents -->
+        <article class="project-card" data-category="voice ai">
+          <div>
+            <div class="project-header">
+              <div class="project-icon-frame">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="23"></line>
+                  <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+              </div>
+              <span class="project-badge-tag">Live Telephony</span>
+            </div>
+
+            <h3 class="project-title">Voice AI Agents — Live Telephony</h3>
+            <p class="project-role-spec">LiveKit · Vapi · SIP Trunking (Zadarma) · Telephony · WebRTC</p>
+            <p class="project-desc">
+              Production voice AI agents wired to a live US telephone number via custom SIP trunking, capable of
+              ultra-low-latency real-time conversations.
+            </p>
+
+            <ul class="project-bullets">
+              <li>Direct live test agent reachable by dialing +1 240-322-1696 hosted on LiveKit infrastructure.</li>
+              <li>Iterated on conversation flows and system prompting to eliminate robotic cadences and naturally manage
+                caller interruptions.</li>
+              <li>Multi-turn state tracking, latency optimization, hallucination mitigation, and fluent English / Hindi
+                / Hinglish evaluation.</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">LiveKit</span>
+            <span class="tech-tag">Vapi</span>
+            <span class="tech-tag">SIP Trunking</span>
+            <span class="tech-tag">Zadarma</span>
+            <span class="tech-tag">WebRTC</span>
+            <span class="tech-tag">System Prompting</span>
+          </div>
+        </article>
+
+        <!-- 4. MCP Servers & Gateways -->
+        <article class="project-card" data-category="ai infra">
+          <div>
+            <div class="project-header">
+              <div class="project-icon-frame">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <span class="project-badge-tag">Edge Gateway</span>
+            </div>
+
+            <h3 class="project-title">MCP Servers & Edge Gateways</h3>
+            <p class="project-role-spec">FastMCP · Python · MongoDB Vector · Cloudflare · Heroku · Koyeb</p>
+            <p class="project-desc">
+              Production deployment of Model Context Protocol (MCP) servers and routing gateways unifying multiple AI
+              tools and vector databases behind a single endpoint.
+            </p>
+
+            <ul class="project-bullets">
+              <li>Engineered Pyjhora MCP (standardized AI model to dev tooling) and IndiaHikes MCP (FastMCP with MongoDB
+                vector store).</li>
+              <li>Architected custom Cloudflare Workers gateways providing authentication, rate-limiting, and routing
+                across distributed MCP hosts.</li>
+              <li>Multi-cloud deployment orchestration spanning Koyeb, Heroku, Prefect Horizon, and Cloudflare.</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">FastMCP</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">MongoDB Vector</span>
+            <span class="tech-tag">Cloudflare Workers</span>
+            <span class="tech-tag">Prefect Horizon</span>
+            <span class="tech-tag">Koyeb</span>
+          </div>
+        </article>
+
+        <!-- 5. Book OCR Pipeline -->
+        <article class="project-card" data-category="ai">
+          <div>
+            <div class="project-header">
+              <div class="project-icon-frame">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+              <span class="project-badge-tag">Agentic OCR</span>
+            </div>
+
+            <h3 class="project-title">Agentic Book OCR & Structuring Pipeline</h3>
+            <p class="project-role-spec">Python · LangGraph · Mistral OCR · Sarvam OCR · Document AI</p>
+            <p class="project-desc">
+              Multi-stage agentic document digitization pipeline chaining specialized vision models to extract, clean,
+              and structure complex scanned books.
+            </p>
+
+            <ul class="project-bullets">
+              <li>LangGraph-orchestrated graph pipeline combining Mistral OCR and Sarvam OCR across layout analysis and
+                extraction phases.</li>
+              <li>Handles complex multi-column typography, footnotes, archaic scripts, and tables with automated quality
+                verification.</li>
+              <li>Structured output schema normalization with hallucination filters and export to markdown and vector
+                stores.</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">LangGraph</span>
+            <span class="tech-tag">Mistral OCR</span>
+            <span class="tech-tag">Sarvam OCR</span>
+            <span class="tech-tag">Document AI</span>
+          </div>
+        </article>
+
+        <!-- 6. Automated GitOps CI/CD & Testing Grid -->
+        <article class="project-card" data-category="devops infra">
+          <div>
+            <div class="project-header">
+              <div class="project-icon-frame">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                  </path>
+                </svg>
+              </div>
+              <span class="project-badge-tag">Kubernetes · GitOps</span>
+            </div>
+
+            <h3 class="project-title">Kubernetes GitOps & Automated Testing Grid</h3>
+            <p class="project-role-spec">Kubernetes · HELM · Jenkins · ArgoCD · Vue.js · Selenium Grid</p>
+            <p class="project-desc">
+              Containerized automated UI and end-to-end testing grid deployed on Kubernetes at ZEMA Global Data, driven
+              by GitOps CI/CD pipelines.
+            </p>
+
+            <ul class="project-bullets">
+              <li>Architected microservices test grid with Selenium Grid, Vue.js, and Python, packaged with HELM charts
+                for K8s deployment.</li>
+              <li>Orchestrated Jenkins and ArgoCD GitOps pipelines to automatically validate releases and cut manual QA
+                turnarounds.</li>
+              <li>Created Python and PowerShell fleet-wide automation for Java/Tomcat patch cycles across Windows and
+                Linux servers.</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">HELM</span>
+            <span class="tech-tag">ArgoCD</span>
+            <span class="tech-tag">Jenkins</span>
+            <span class="tech-tag">Selenium Grid</span>
+            <span class="tech-tag">Python</span>
+          </div>
+        </article>
+
+        <!-- 7. satTrack Ecosystem -->
+        <article class="project-card" data-category="infra devops">
+          <div>
+            <div class="project-header">
+              <div class="project-icon-frame">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M2 12h20"></path>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </div>
+              <span class="project-badge-tag">Orbital Telemetry</span>
+            </div>
+
+            <h3 class="project-title">satTrack Real-Time Orbital Tracking</h3>
+            <p class="project-role-spec">ReactJS · Python · Flask · Skyfield · CelesTrak · NASA TLE</p>
+            <p class="project-desc">
+              Real-time orbital tracking web platform and API parsing high-frequency Two-Line Element (TLE) datasets to
+              compute ground tracks and satellite passes.
+            </p>
+
+            <ul class="project-bullets">
+              <li>High-precision orbital mechanics calculations using Python Skyfield and CelesTrak ephemeris data.</li>
+              <li>Fast Flask REST API backend with in-memory caching and real-time latitude/longitude trajectory
+                interpolation.</li>
+              <li>Interactive ReactJS frontend displaying global satellite footprints and upcoming visible passes.</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Skyfield</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">ReactJS</span>
+            <span class="tech-tag">CelesTrak</span>
+            <span class="tech-tag">NASA TLE</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Voice AI Live Interactive Showcase -->
+    <section id="voice-ai" class="container section">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="brand-diamond" style="width: 6px; height: 6px;"></span>
+          <span>Real-Time Telephony</span>
+        </div>
+        <h2 class="section-title">Voice AI Agent Infrastructure</h2>
+        <p class="section-subtitle">
+          Bridging the physical telephone network to low-latency AI reasoning. Direct SIP trunking, WebRTC audio
+          processing, and conversation design.
+        </p>
+      </div>
+
+      <div class="voice-ai-showcase">
+        <div class="voice-cockpit-grid">
+
+          <div class="voice-info-col">
+            <h3>Live Telephony Testline</h3>
+            <p>
+              I deployed real-time voice agents on LiveKit and Vapi wired directly to a North American phone number
+              through a custom SIP trunk on Zadarma. Anyone can dial in and speak to the agent in real time.
+            </p>
+
+            <div class="telephony-dial-box">
+              <div class="dial-label">
+                <span>Active Production Number</span>
+                <span class="kbd-badge"
+                  style="color: var(--color-success-green); border-color: rgba(89, 212, 153, 0.3)">ONLINE</span>
+              </div>
+
+              <div class="dial-number-row">
+                <span class="dial-number-val">+1 240-322-1696</span>
+                <div class="dial-actions">
+                  <a href="tel:+12403221696" class="btn-dial" id="dial-agent-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                    <span>Dial Agent</span>
+                  </a>
+                  <button class="btn-copy-num" data-copy="+12403221696" aria-label="Copy phone number">
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div style="font-size: 12px; color: var(--color-smoke); line-height: 1.5;">
+                Hosted on LiveKit with SIP bridging. Tested across unpredictable speaker cadence, acoustic noise, and
+                bilingual English / Hindi / Hinglish.
+              </div>
+            </div>
+          </div>
+
+          <!-- Waveform & Pipeline Column -->
+          <div class="waveform-box">
+            <div class="waveform-header">
+              <span>TELEPHONY AUDIO STREAM</span>
+              <span>&lt; 500MS ROUNDTRIP</span>
+            </div>
+
+            <div class="waveform-visualizer" id="waveform">
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+              <span class="wave-bar active"></span>
+            </div>
+
+            <div class="pipeline-flow">
+              <div class="flow-step">
+                <span class="flow-step-dot active"></span>
+                <span>1. Caller dials into PSTN → Zadarma SIP Trunk</span>
+              </div>
+              <div class="flow-step">
+                <span class="flow-step-dot active"></span>
+                <span>2. WebRTC Audio Stream Bridge (LiveKit / Vapi Gateway)</span>
+              </div>
+              <div class="flow-step">
+                <span class="flow-step-dot active"></span>
+                <span>3. Deepgram STT → LLM Reasoning & Prompt Guardrails</span>
+              </div>
+              <div class="flow-step">
+                <span class="flow-step-dot active"></span>
+                <span>4. Cartesia / ElevenLabs TTS stream back to caller</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Production Experience Section -->
+    <section id="experience" class="container section">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="brand-diamond" style="width: 6px; height: 6px;"></span>
+          <span>Career History</span>
+        </div>
+        <h2 class="section-title">Production Experience</h2>
+        <p class="section-subtitle">
+          Over 2.5 years of professional engineering in mission-critical environments: automation, enterprise systems
+          hardening, and cloud reliability.
+        </p>
+      </div>
+
+      <div class="experience-list">
+
+        <!-- ZEMA Global Data Corporation -->
+        <article class="exp-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role">Systems Analyst III</h3>
+              <div class="exp-company">
+                <span>ZEMA Global Data Corporation</span>
+                <span style="color: var(--color-slate)">•</span>
+                <span>Richmond, BC, Canada</span>
+              </div>
+            </div>
+            <span class="exp-period">Sep 2021 — Sep 2023</span>
+          </div>
+
+          <ul class="exp-bullets">
+            <li>Designed and deployed an automated UI and end-to-end testing system (Vue.js, Python, Selenium Grid) as
+              containerized microservices on Kubernetes with HELM.</li>
+            <li>Constructed GitOps CI/CD delivery pipelines using Jenkins and ArgoCD, slashing manual QA regression
+              cycles and accelerating production release frequency.</li>
+            <li>Engineered Python and PowerShell automation pipelines for Java and Apache Tomcat upgrades across
+              enterprise Windows server fleets, eradicating manual patching toil.</li>
+            <li>Authored Bash deployment automation for Linux server applications and established standardized runbooks
+              for autonomous engineering operations.</li>
+            <li>Led security patching and system hardening across 50+ enterprise servers as part of recurring
+              vulnerability mitigation and compliance cycles.</li>
+            <li>Investigated recurring production incidents using Kibana, Logstash (ELK Stack), and APM dashboards to
+              trace root causes, coordinating with partners within strict SLAs.</li>
+            <li>Configured enterprise SAML and OAuth2 single sign-on (SSO) for institutional clients and mentored junior
+              engineers on infrastructure best practices.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">HELM</span>
+            <span class="tech-tag">Jenkins</span>
+            <span class="tech-tag">ArgoCD</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PowerShell</span>
+            <span class="tech-tag">ELK Stack</span>
+            <span class="tech-tag">SAML / OAuth2</span>
+          </div>
+        </article>
+
+        <!-- Secure Defence Corporation -->
+        <article class="exp-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role">Network & IT Administrator</h3>
+              <div class="exp-company">
+                <span>Secure Defence Corporation</span>
+                <span style="color: var(--color-slate)">•</span>
+                <span>Richmond, BC, Canada</span>
+              </div>
+            </div>
+            <span class="exp-period">Jan 2021 — Sep 2021</span>
+          </div>
+
+          <ul class="exp-bullets">
+            <li>Designed and configured a multi-WAN automatic failover network utilizing PfSense, achieving high
+              connectivity reliability for continuous remote camera monitoring operations.</li>
+            <li>Provisioned, hardened, and maintained 20+ bare-metal servers and workstations, including OS
+              installations, VLAN segmentation, and automated backup routines.</li>
+            <li>Administered secure remote access topologies using Tailscale, ZeroTier, and IPSec VPNs to protect
+              distributed surveillance feeds.</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span class="tech-tag">PfSense</span>
+            <span class="tech-tag">Multi-WAN</span>
+            <span class="tech-tag">VLANs</span>
+            <span class="tech-tag">Tailscale</span>
+            <span class="tech-tag">Network Hardening</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Architecture & Skills Cockpit -->
+    <section id="skills" class="container section">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="brand-diamond" style="width: 6px; height: 6px;"></span>
+          <span>Technical Domain Matrix</span>
+        </div>
+        <h2 class="section-title">Architecture & Skills</h2>
+        <p class="section-subtitle">
+          Core toolkits, protocols, and platforms organized by engineering capability.
+        </p>
+      </div>
+
+      <div class="skills-matrix-grid">
+
+        <!-- 1. AI & LLM Systems -->
+        <div class="skill-panel">
+          <h3 class="skill-panel-title">
+            <span class="skill-panel-icon">◈</span>
+            <span>LLMs & Agent Architectures</span>
+          </h3>
+          <div class="skill-items-list">
+            <span class="skill-chip">LangChain</span>
+            <span class="skill-chip">LangGraph</span>
+            <span class="skill-chip">LlamaIndex</span>
+            <span class="skill-chip">Model Context Protocol (MCP)</span>
+            <span class="skill-chip">Two-Stage RAG</span>
+            <span class="skill-chip">GraphRAG</span>
+            <span class="skill-chip">Semantic Reranking</span>
+            <span class="skill-chip">Prompt Engineering</span>
+            <span class="skill-chip">OpenAI-Compatible APIs</span>
+            <span class="skill-chip">Anthropic Claude</span>
+            <span class="skill-chip">Pinecone</span>
+            <span class="skill-chip">MongoDB Vector</span>
+            <span class="skill-chip">Voyage AI</span>
+          </div>
+        </div>
+
+        <!-- 2. Voice AI & Telephony -->
+        <div class="skill-panel">
+          <h3 class="skill-panel-title">
+            <span class="skill-panel-icon">◈</span>
+            <span>Voice AI & Telephony</span>
+          </h3>
+          <div class="skill-items-list">
+            <span class="skill-chip">LiveKit</span>
+            <span class="skill-chip">Vapi</span>
+            <span class="skill-chip">SIP Trunking (Zadarma)</span>
+            <span class="skill-chip">WebRTC Audio</span>
+            <span class="skill-chip">Telephony Integration</span>
+            <span class="skill-chip">Conversation Flows</span>
+            <span class="skill-chip">Latency Tuning</span>
+            <span class="skill-chip">Interruption Handling</span>
+            <span class="skill-chip">Agent Red-Teaming</span>
+            <span class="skill-chip">Deepgram STT</span>
+            <span class="skill-chip">Cartesia / ElevenLabs</span>
+          </div>
+        </div>
+
+        <!-- 3. Cloud & Edge Platforms -->
+        <div class="skill-panel">
+          <h3 class="skill-panel-title">
+            <span class="skill-panel-icon">◈</span>
+            <span>Cloud & Edge Infrastructure</span>
+          </h3>
+          <div class="skill-items-list">
+            <span class="skill-chip">Cloudflare Workers</span>
+            <span class="skill-chip">Cloudflare R2</span>
+            <span class="skill-chip">AWS (EC2, S3, IAM)</span>
+            <span class="skill-chip">Azure</span>
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">Kubernetes</span>
+            <span class="skill-chip">HELM</span>
+            <span class="skill-chip">Heroku</span>
+            <span class="skill-chip">Koyeb</span>
+            <span class="skill-chip">Prefect Horizon</span>
+            <span class="skill-chip">FastMCP Gateways</span>
+          </div>
+        </div>
+
+        <!-- 4. Languages & APIs -->
+        <div class="skill-panel">
+          <h3 class="skill-panel-title">
+            <span class="skill-panel-icon">◈</span>
+            <span>Languages & Backends</span>
+          </h3>
+          <div class="skill-items-list">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">Go (Golang)</span>
+            <span class="skill-chip">TypeScript</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">FastAPI</span>
+            <span class="skill-chip">Flask</span>
+            <span class="skill-chip">NodeJS</span>
+            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">SQL & NoSQL</span>
+          </div>
+        </div>
+
+        <!-- 5. CI/CD & Automation -->
+        <div class="skill-panel">
+          <h3 class="skill-panel-title">
+            <span class="skill-panel-icon">◈</span>
+            <span>CI/CD & DevOps Automation</span>
+          </h3>
+          <div class="skill-items-list">
+            <span class="skill-chip">Jenkins</span>
+            <span class="skill-chip">ArgoCD</span>
+            <span class="skill-chip">GitOps</span>
+            <span class="skill-chip">Bash Scripting</span>
+            <span class="skill-chip">PowerShell</span>
+            <span class="skill-chip">Selenium Grid</span>
+            <span class="skill-chip">AI-Assisted Dev (Claude Code)</span>
+            <span class="skill-chip">OpenCode</span>
+            <span class="skill-chip">PDQ Deploy</span>
+          </div>
+        </div>
+
+        <!-- 6. Observability & Security -->
+        <div class="skill-panel">
+          <h3 class="skill-panel-title">
+            <span class="skill-panel-icon">◈</span>
+            <span>Observability & Networking</span>
+          </h3>
+          <div class="skill-items-list">
+            <span class="skill-chip">Prometheus</span>
+            <span class="skill-chip">Grafana</span>
+            <span class="skill-chip">Elasticsearch</span>
+            <span class="skill-chip">Logstash</span>
+            <span class="skill-chip">Kibana (ELK)</span>
+            <span class="skill-chip">APM Dashboards</span>
+            <span class="skill-chip">PfSense</span>
+            <span class="skill-chip">SAML / OAuth2 SSO</span>
+            <span class="skill-chip">Tailscale</span>
+            <span class="skill-chip">ZeroTier</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="container section">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="brand-diamond" style="width: 6px; height: 6px;"></span>
+          <span>Academic Background</span>
+        </div>
+        <h2 class="section-title">Education & Credentials</h2>
+        <p class="section-subtitle">
+          Advanced computer science foundation with a specialization in artificial intelligence and machine learning.
+        </p>
+      </div>
+
+      <div class="education-grid">
+        <div class="edu-card">
+          <h3 class="edu-degree">MTech in Software Systems</h3>
+          <p class="edu-institution">Birla Institute of Technology and Science (BITS), Pilani</p>
+          <div class="edu-meta">
+            <span>2024 — Present (Expected Nov 2026)</span>
+            <div style="margin-top: 6px; color: var(--color-ash);">
+              Specialized Coursework: Artificial Intelligence, Machine Learning, Advanced Cloud Architecture.
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <h3 class="edu-degree">Bachelor of Computer Information Systems (CS)</h3>
+          <p class="edu-institution">University of the Fraser Valley (UFV) — Abbotsford, BC, Canada</p>
+          <div class="edu-meta">
+            <span>2017 — 2021</span>
+            <div style="margin-top: 6px; color: var(--color-ash);">
+              Focus: Distributed Systems, Operating Systems, Computer Networks, and Software Engineering.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect & Terminal Section -->
+    <section id="connect" class="container section">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="brand-diamond" style="width: 6px; height: 6px;"></span>
+          <span>Direct Channel</span>
+        </div>
+        <h2 class="section-title">Connect & Deploy</h2>
+        <p class="section-subtitle">
+          Reach out for AI Systems roles, RAG/Voice consulting, or infrastructure engineering opportunities.
+        </p>
+      </div>
+
+      <div class="connect-hub">
+
+        <!-- Terminal Window Mockup -->
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+            <span class="terminal-title">chinmay@cockpit:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="cmd-line">
+              <span class="cmd-prefix">$</span> curl -s https://chinmay-sh.github.io/status.json
+            </div>
+            <pre><code>{
+  <span class="json-key">"engineer"</span>: <span class="json-str">"Chinmay Sharma"</span>,
+  <span class="json-key">"status"</span>: <span class="json-str">"Available for Full-time Roles & Contracts"</span>,
+  <span class="json-key">"specialties"</span>: [<span class="json-str">"AI Systems"</span>, <span class="json-str">"RAG Pipelines"</span>, <span class="json-str">"Voice AI"</span>, <span class="json-str">"DevOps"</span>],
+  <span class="json-key">"contact"</span>: {
+    <span class="json-key">"email"</span>: <span class="json-str">"chinmaysharma1831@gmail.com"</span>,
+    <span class="json-key">"voice_agent_testline"</span>: <span class="json-str">"+1 240-322-1696"</span>
+  }
+}</code></pre>
+          </div>
+        </div>
+
+        <!-- Action Grid -->
+        <div class="contact-action-grid">
+
+          <button class="contact-card-btn" data-copy="chinmaysharma1831@gmail.com">
+            <div class="btn-title">
+              <span>Copy Email</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </div>
+            <span class="btn-sub">chinmaysharma1831@gmail.com</span>
+          </button>
+
+          <a href="mailto:chinmaysharma1831@gmail.com?subject=Resume%20Request%20-%20Chinmay%20Sharma"
+            class="contact-card-btn">
+            <div class="btn-title">
+              <span>Request Resume</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <span class="btn-sub">Email Request ✉️</span>
+          </a>
+
+          <a href="https://github.com/chinmay-sh" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
+            <div class="btn-title">
+              <span>GitHub</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </div>
+            <span class="btn-sub">github.com/chinmay-sh ↗</span>
+          </a>
+
+          <a href="https://linkedin.com/in/chinmay001" target="_blank" rel="noopener noreferrer"
+            class="contact-card-btn">
+            <div class="btn-title">
+              <span>LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </div>
+            <span class="btn-sub">linkedin.com/in/chinmay001 ↗</span>
+          </a>
+
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Meta Strip (Raycast Spec) -->
+  <footer class="footer-strip">
+    <div class="container">
+      <div class="footer-meta-line">
+        <span>chinmay-sh.github.io</span>
+        <span class="pipe">|</span>
+        <span>v2.4.0</span>
+        <span class="pipe">|</span>
+        <span>Raycast Design System</span>
+        <span class="pipe">|</span>
+        <span>GitHub Pages User Magic Repo</span>
+        <span class="pipe">|</span>
+        <span>Press <kbd class="kbd-badge">⌘K</kbd> to launch Command Palette</span>
+      </div>
+      <div class="footer-sub">
+        © 2026 Chinmay Sharma. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Raycast Command Palette Modal (⌘K / Ctrl+K) -->
+  <div id="cmd-modal-backdrop" class="cmd-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cmd-modal">
+      <div class="cmd-input-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="cmd-search-input" class="cmd-search-input"
+          placeholder="Type a command, project, or action..." autocomplete="off" spellcheck="false">
+        <span class="cmd-esc-badge">ESC</span>
+      </div>
+
+      <div class="cmd-results-list" id="cmd-results-list">
+        <!-- Results dynamically populated via app.js -->
+      </div>
+
+      <div class="cmd-footer">
+        <div class="cmd-hints">
+          <span><kbd class="kbd-badge">↑</kbd> <kbd class="kbd-badge">↓</kbd> to navigate</span>
+          <span><kbd class="kbd-badge">↵</kbd> to select</span>
+        </div>
+        <div>
+          <span>Raycast Cockpit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client Script Logic -->
+  <script src="app.js"></script>
+</body>
+
+</html>
